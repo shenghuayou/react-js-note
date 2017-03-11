@@ -1,6 +1,6 @@
 # react-js-note #
 * react js basic
-* Example codes in react js
+* collections of example codes
 * Source of learning react js
 
 ## Example ##
@@ -43,6 +43,17 @@
           <Title title={this.props.title} />
           <input onChange={this.handleChange.bind(this)} />
         </div>
+      );
+    }
+  }
+  ```
+  
+  ```js
+  //Title.js
+  export default class Title extends React.Component {
+    render() {
+      return (
+        <h1>{this.props.title}</h1>
       );
     }
   }
