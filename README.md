@@ -59,6 +59,7 @@
     }
   }
   ```
+--
 2. use Ajax/axios requests in React js - From [Brad Westfall](https://www.youtube.com/watch?v=A2-u0KnyxWs)
   ```js
   import React from 'react'
@@ -103,6 +104,7 @@
 
   ReactDOM.render(<App />, document.getElementById('root'))
   ```
+--
 3. Basic redux store and reducer codes - From [LearnCode.academy](https://www.youtube.com/watch?v=ucd5x3Ka3gw&index=17&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
   ```js
   import { createStore } from "redux";
@@ -127,5 +129,13 @@
   //store changed 1
   //store changed 3
   ```
+--
+4. connect react and redux, get data from website use axios in action files. - From [learnCode.academy](https://www.youtube.com/watch?v=nrg7zhgJd4w&index=21&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
+
+  * [source codes](https://github.com/learncodeacademy/react-js-tutorials/tree/master/5-redux-react)
+  
+  --
+  
+5. continue..
 
   
