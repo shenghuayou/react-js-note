@@ -1,5 +1,6 @@
 # react-js-note #
 * react js basic
+* relative packages
 * collections of example codes
 * Source of learning react js
 
@@ -57,4 +58,49 @@
       );
     }
   }
+  ```
+ 2. use Ajax/axios requests in React js - From [Brad Westfall](https://www.youtube.com/watch?v=A2-u0KnyxWs)
+ 
+  ```js
+  import React from 'react'
+  import ReactDOM from 'react-dom'
+  import axios from 'axios'
+
+  let User = function(props) {
+    return (
+      <div className="user">
+        <div>Name: {props.name}</div>
+      </div>
+    )
+  }
+
+  let App = React.createClass({
+
+    getInitialState: function() {
+      return {
+        users: []
+      }
+    },
+    // get request from website
+    componentDidMount: function() {
+      axios.get('http://swapi.co/api/people').then(results => {
+        this.setState({
+          users: results.data.results
+        })
+      })
+    },
+    // use map to loop through all the data
+    render: function() {
+      return (
+        <div>
+          <h1>Star Wars Characters:</h1>
+          {this.state.users.map(user => {
+            return <User name={user.name} key={user.name} />
+          })}
+        </div>
+      )
+    }
+  })
+
+  ReactDOM.render(<App />, document.getElementById('root'))
   ```
