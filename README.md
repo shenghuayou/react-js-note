@@ -59,8 +59,7 @@
     }
   }
   ```
- 2. use Ajax/axios requests in React js - From [Brad Westfall](https://www.youtube.com/watch?v=A2-u0KnyxWs)
- 
+2. use Ajax/axios requests in React js - From [Brad Westfall](https://www.youtube.com/watch?v=A2-u0KnyxWs)
   ```js
   import React from 'react'
   import ReactDOM from 'react-dom'
