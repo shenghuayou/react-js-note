@@ -1,4 +1,4 @@
-# react-js-note #
+# react-redux-note #
 * react js basic
 * relative packages
 * collections of example codes
@@ -103,3 +103,29 @@
 
   ReactDOM.render(<App />, document.getElementById('root'))
   ```
+3. Basic redux store and reducer codes - From [LearnCode.academy](https://www.youtube.com/watch?v=ucd5x3Ka3gw&index=17&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
+  ```js
+  import { createStore } from "redux";
+  const reducer = function (state, action) {
+    if (action.type ==="INC") {
+      return state+action.payload;
+    }
+    if (action.type ==="DEC") {
+      return state-action.payload;
+    }
+    return state;
+  }
+  
+  const store = createStore(reducer, 0);
+  store.subscrbe(() => {
+    console.log("store changed", store.getState())
+  })
+  
+  store.dispatch({type: "INC", payload: {1}})
+  store.dispatch({type: "INC", payload: {1}})
+  //output: 
+  //store changed 1
+  //store changed 3
+  ```
+
+  
